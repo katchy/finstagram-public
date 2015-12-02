@@ -5,7 +5,7 @@ class AddUsersToCitiesBuildings < ActiveRecord::Migration
         change_table :cities do |t|
             t.references :user
         end
-        
+         
         change_table :buildings do |t|
             t.references :user
         end

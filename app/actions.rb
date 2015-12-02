@@ -3,7 +3,7 @@ helpers do
     #returns nil if no user found
     def current_user
        @current_user ||= User.find_by_id(session[:user_id]) if session[:user_id]
-    end
+    end 
    
     def check_user_signed_in
         if session[:user_id] == nil
