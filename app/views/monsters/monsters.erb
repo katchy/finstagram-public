@@ -1,0 +1,26 @@
+<h1 class="centered">Monsters</h1>
+
+<div class="container">
+
+<!-- do each monster with section.row.monster -->
+<% @monsters.each do |monster| %>
+
+    <section class="row monster">
+        <div class="col-xs-2 col-xs-offset-3">
+            <img src="<%= monster[:img_url] %>">
+        </div>
+        <div class="col-xs-4">
+            <p><strong><%= monster[:name] %></strong> was first seen 
+            <%= monster[:first_seen].strftime('%B %e, %Y') %> when 
+            
+            <% monster[:victims].each_with_index do |victim, i| %>
+                <em><%= victim[:name] %></em>
+                <%= victim[:killed_by] %><%= (i == monster[:victims].length - 1) ? "." : "," %>
+                
+            <% end %>
+            </p>
+        </div>
+    </section>
+<% end %>
+
+</div>

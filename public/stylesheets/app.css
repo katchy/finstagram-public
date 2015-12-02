@@ -1,15 +1,39 @@
-header {
+body{
+  background-color: #244751 ;
+}
+
+header, footer{
+  height: 100px;
+  width: 100%;
+}
+
+header, footer {
   background-color: #244751;
   color: #E8FDFF;
 }
 
-body {
-  background-color: whitesmoke;
+footer{
+  height: 100px;
 }
 
-main {
+body {
+  font-family: 'Inconsolata', Arial, serif;
+}
+
+#main {
+  background-color: whitesmoke;
+}
+.container{
+  min-height: 200px;
   background-color: white;
-  padding: 1em;
+  padding-top: 50px;
+}
+header .container{
+  background-color: transparent;
+  color: white;
+}
+header .container a{
+  color: #dde;
 }
 
 header h1 {
@@ -22,4 +46,45 @@ header h1 {
 
 .post .user-info img {
   border-radius: 50%;
+}
+
+h1.username{
+  color: #666;
+}
+
+.centered{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.monster img{
+  width: 100px;
+  height: 100px;
+  
+  margin: 0 auto;
+  margin-right: 20px;
+  
+  border-radius: 50%;
+  
+  float: right;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+.monster p{
+  
+    padding-top: 15px;
+}
+section.monster{
+  padding-bottom; 20px;
+  margin-bottom: 40px;
+}
+
+.buildings h3{
+  
+  margin-top: 0;
+  margin-bottom: 3px;
+  
+}
+.buildings h4{
+  margin-top: 0;
+  color: #2979A5;
 }

@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="/stylesheets/normalize.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,700italic,700,300">
+    <link rel="stylesheet" href="/stylesheets/lib.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/app.css">
+
+    <title>Finstagram</title>
+  </head>
+  <body>
+
+    <header>
+      <div class="container">
+        <% if current_user %>
+          Welcome, <%= current_user.username %>! <a href="/logout">Log out</a>
+        <% else %>
+          <a href="/login">Log in</a> or <a href="/signup">Sign up</a>
+        <% end %>
+      </div>
+    </header>
+    
+    <div id="main">
+      <div class="container">
+        <ul class="errors">
+          <% if @errors 
+            @errors.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          <% end %>
+        </ul>
+        <%= yield %> <!-- where the erb we require is being output -->
+      </div>    
+    </div>
+    
+    <footer>
+      
+    </footer>
+    
+  </body>
+</html>
+
+
