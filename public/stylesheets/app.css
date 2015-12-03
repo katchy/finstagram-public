@@ -1,81 +1,13 @@
-body{
-  background-color: #244751 ;
-}
-
-header, footer{
-  height: 100px;
-  width: 100%;
-}
-
-header, footer {
-  background-color: #244751;
-  color: #E8FDFF;
-}
-
-footer{
-  height: 100px;
-}
-
-body {
-  font-family: 'Inconsolata', Arial, serif;
-}
-
-#main {
-  background-color: whitesmoke;
-}
-.container{
-  min-height: 200px;
-  background-color: white;
-  padding-top: 50px;
-}
-header .container{
-  background-color: transparent;
-  color: white;
-}
-header .container a{
-  color: #dde;
-}
-
-header h1 {
-  margin-left: 1em;
-}
-
-.post {
-  margin-bottom: 2em;
-}
-
-.post .user-info img {
-  border-radius: 50%;
-}
-
-h1.username{
+.buildings p{
   color: #666;
+  font-size: 120%;
+  line-height: 1.3;
 }
-
-.centered{
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.monster img{
-  width: 100px;
-  height: 100px;
-  
-  margin: 0 auto;
-  margin-right: 20px;
-  
-  border-radius: 50%;
-  
-  float: right;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
-}
-.monster p{
-  
-    padding-top: 15px;
-}
-section.monster{
-  padding-bottom; 20px;
-  margin-bottom: 40px;
+.buildings h1 > a,
+.buildings h2 > a,
+.buildings h3 > a,
+.buildings h4 > a{
+  color: inherit;
 }
 
 .buildings h3{

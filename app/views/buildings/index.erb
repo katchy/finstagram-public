@@ -19,7 +19,7 @@
                 <img class="img-responsive" src="<%= building.img_src %>" >
             </div>
             <div class="col-xs-10 col-md-5">
-                <h3><%= building.name %></h3>
+                <h3><a href="#"><%= building.name %></a></h3>
                 <h4><%= building.city.name %></h4>
                 <p>The <%= building.name %> was built in <%= readable_date(building.date_built) %> and clocks in at <%= building.height_m %>m.</p>
             </div>
