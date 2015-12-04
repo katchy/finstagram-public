@@ -93,6 +93,20 @@ get '/logout' do
     redirect '/'
 end
 
+get '/buildings/new' do
+
+    check_user_signed_in
+
+    @cities = City.all
+    erb :'buildings/new'
+end
+
+# /buildings/6
+get '/buildings/:id' do
+    @building = Building.find(params[:id])
+    erb :'buildings/show'
+end
+
 get '/buildings' do
 
     #implement a search here
@@ -104,14 +118,6 @@ get '/buildings' do
     end
     
     erb :'buildings/index'
-end
-
-get '/buildings/new' do
-
-    check_user_signed_in
-
-    @cities = City.all
-    erb :'buildings/new'
 end
 
 post '/buildings/new' do

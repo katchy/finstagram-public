@@ -15,16 +15,7 @@
     
         <% if i%2 == 0 %> <section class="building row"><% end %>
         
-            <div class="col-xs-2 col-md-1">
-                <a href="#">
-                    <img class="img-responsive" src="<%= building.img_src %>">
-                </a>
-            </div>
-            <div class="col-xs-10 col-md-5">
-                <h3><a href="#"><%= building.name %></a></h3>
-                <h4><%= building.city.name %></h4>
-                <p>The <%= building.name %> was built in <%= readable_date(building.date_built) %> and clocks in at <%= building.height_m %>m.</p>
-            </div>
+        <%= erb :'buildings/_single', {locals: { building: building}} %>
             
         <% if i%2 == 1 || i == @buildings.length-1%></section><hr><% end %>
     <% end %>
