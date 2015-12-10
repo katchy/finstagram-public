@@ -15,19 +15,24 @@ end %>
         <input class="form-control" type="text" name="name" id="name">
     </div>    
  
-    <div class="form-group">
-        <label for="city_id">City</label><br>
-        <select class="form-control" name="city_id" id="city_id">
-            <% @cities.each do |city| %>
-                <option value="<%= city.id %>"><%= city.name %></option>
-            <% end %>
-        </select>
-    </div> 
+    
  
     <div class="row">
         
         <div class="form-group col-sm-4">
             
+            <div class="form-group">
+                <label for="city_id">City</label><br>
+                <select class="form-control" name="city_id" id="city_id">
+                    <% @cities.each do |city| %>
+                        <option value="<%= city.id %>"><%= city.name %></option>
+                    <% end %>
+                </select>
+            </div> 
+            <div class="form-group">
+                <label for="img_src">Image URL</label><br>
+                <input class="form-control" type="url" name="img_src" id="img_src">
+            </div>
             <!-- height_m as number -->
             <div class="form-group">
                 <label for="height_m">Height (m)</label><br>
@@ -46,17 +51,13 @@ end %>
                 <label for="is_ugly_no">No</label>
                 <input type="radio" name="is_ugly" id="is_ugly_no" value="0">
             </div>
-            <div class="form-group">
-                <label for="img_src">Image URL</label><br>
-                <input class="form-control" type="url" name="img_src" id="img_src">
-            </div>
+
         </div>
         <div class="col-sm-4">
             <img id="preview" src="">
         </div>
     </div>
     
-    <!-- img_src as text -->
 
     <button class="form-control btn btn-success" type="submit">Submit Building</button>
     
