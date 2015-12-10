@@ -1,0 +1,22 @@
+<h1>All Buildings</h1>
+<p><a href="/buildings/new">Submit a building</a></p>
+
+<!-- create a search -->
+<form  method="get" action="/buildings/index">
+    <!--<label for="keywords">Search</label>-->
+    <input type="search" name="keywords" id="keywords"/>
+    <button type="submit">Search</button> 
+</form> 
+
+<hr>
+
+<div class="buildings">
+    <% @buildings.each_with_index do |building, i| %>
+    
+        <% if i%2 == 0 %> <section class="building row"><% end %>
+        
+        <%= erb :'buildings/_single', {locals: { building: building}} %>
+            
+        <% if i%2 == 1 || i == @buildings.length-1%></section><hr><% end %>
+    <% end %>
+</div>

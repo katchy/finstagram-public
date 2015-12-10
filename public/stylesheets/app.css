@@ -1,0 +1,37 @@
+hr{
+  width: 100%;
+  max-width: none;
+  border-color: #ccc;
+}
+
+.buildings p{
+  color: #666;
+  font-size: 120%;
+  line-height: 1.3;
+}
+.buildings h1 > a,
+.buildings h2 > a,
+.buildings h3 > a,
+.buildings h4 > a{
+  color: inherit;
+}
+
+.buildings h3{
+  
+  margin-top: 0;
+  margin-bottom: 3px;
+  
+}
+.buildings h4{
+  margin-top: 0;
+  color: #2979A5;
+}
+.buildings img{
+  box-shadow: 1px 1px 0 white,
+  2px 2px 0 #333;
+  transition: 100ms all;
+}
+.buildings img:hover{
+  box-shadow: 3px 3px 0 white,
+  6px 6px 0 #333;
+}
